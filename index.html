@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFT</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <div class="heart-container">
+        <div class="heart">
+            <div class="heart-content">
+                <h1>CUTIE GETS A GIFT</h1>
+                <button type="button" id="openGiftBtn">Open Gift</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="signInModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>ENTER OUR SECRET</h2>
+            <form id="signInForm">
+                <input type="text" placeholder="Name" required>
+                <input type="password" placeholder="Cutie Code" required>
+                <p id="errorMessage" class="error-message"></p>
+                <button type="submit">Get Gift</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

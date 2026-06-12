@@ -1,0 +1,120 @@
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #ffb6d9;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.welcome-container:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.welcome-content {
+    background: transparent;
+    padding: 20px;
+    width: auto;
+    height: auto;
+    box-shadow: none;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-content h1 {
+    color: #66d1ef;
+    font-size: 2rem;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.welcome-content p {
+    color: #64d5f2;
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 10px 0;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.back-btn {
+    background: linear-gradient(135deg, #ff6eb4 0%, #d45a94 100%);
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(212, 90, 148, 0.3);
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+
+.input-field::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-field:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #fff;
+}
+
+
+
+
+.heart-svg {
+    position: absolute;
+    width: 850px;
+    height: 850px;
+    left: 60%;
+    top: 60%;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    z-index: 0;
+    pointer-events: none;
+    filter: drop-shadow(0 30px 80px rgba(212,90,148,0.18));
+    transition: transform 0.35s cubic-bezier(.2,.9,.2,1);
+    animation: heartPulse 3.2s ease-in-out infinite;
+}
+
+.heart-svg path { transform-origin: 50% 50%; }
+
+@keyframes heartPulse {
+    0% { transform: translate(-50%, -50%) rotate(-10deg) scale(1); }
+    30% { transform: translate(-50%, -50%) rotate(-10deg) scale(1.035); }
+    60% { transform: translate(-50%, -50%) rotate(-10deg) scale(0.99); }
+    100% { transform: translate(-50%, -50%) rotate(-10deg) scale(1); }
+}
+
